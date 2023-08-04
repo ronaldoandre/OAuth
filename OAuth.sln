@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 APP", "01 APP", "{39CF130B-0CC0-4C10-AF2E-8E3B8A9FF856}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 API", "02 API", "{D4E53512-4625-4FCB-9F87-25608009FA18}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 SERVICES", "03 SERVICES", "{62BDEDBE-0EC2-4F37-AC67-9EDBB7C33C9B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{4D094FDE-A2D9-410C-AD89-428EC0621E66}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		coverage-report.ps1 = coverage-report.ps1
+		coverage-report.sh = coverage-report.sh
+		coverlet.runsettings = coverlet.runsettings
+		Directory.Build.props = Directory.Build.props
+		global.json = global.json
+		nuget.config = nuget.config
+		README.md = README.md
+		StyleCop.Analyzers.ruleset = StyleCop.Analyzers.ruleset
+		stylecop.json = stylecop.json
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OAuth.App", "src\app\src\OAuth.App.csproj", "{64CCAA2E-90E2-40C0-AC76-A999F532977D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1CD6E5CA-D3DA-4821-B2D4-57EDB211B604} = {1CD6E5CA-D3DA-4821-B2D4-57EDB211B604}
+		{40013398-4766-4DFD-A2DE-EA114527E28D} = {40013398-4766-4DFD-A2DE-EA114527E28D}
+		{D447AB80-91B6-44C6-8A4E-710746524D35} = {D447AB80-91B6-44C6-8A4E-710746524D35}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OAuth.Rest", "src\rest\src\OAuth.Rest.csproj", "{D447AB80-91B6-44C6-8A4E-710746524D35}"
+	ProjectSection(ProjectDependencies) = postProject
+		{40013398-4766-4DFD-A2DE-EA114527E28D} = {40013398-4766-4DFD-A2DE-EA114527E28D}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OAuth.Abstracts", "src\abstracts\OAuth.Abstracts.csproj", "{1CD6E5CA-D3DA-4821-B2D4-57EDB211B604}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OAuth.Auth", "src\auth\src\OAuth.Auth.csproj", "{40013398-4766-4DFD-A2DE-EA114527E28D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1CD6E5CA-D3DA-4821-B2D4-57EDB211B604} = {1CD6E5CA-D3DA-4821-B2D4-57EDB211B604}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64CCAA2E-90E2-40C0-AC76-A999F532977D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64CCAA2E-90E2-40C0-AC76-A999F532977D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64CCAA2E-90E2-40C0-AC76-A999F532977D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64CCAA2E-90E2-40C0-AC76-A999F532977D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D447AB80-91B6-44C6-8A4E-710746524D35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D447AB80-91B6-44C6-8A4E-710746524D35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D447AB80-91B6-44C6-8A4E-710746524D35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D447AB80-91B6-44C6-8A4E-710746524D35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CD6E5CA-D3DA-4821-B2D4-57EDB211B604}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CD6E5CA-D3DA-4821-B2D4-57EDB211B604}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CD6E5CA-D3DA-4821-B2D4-57EDB211B604}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CD6E5CA-D3DA-4821-B2D4-57EDB211B604}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40013398-4766-4DFD-A2DE-EA114527E28D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40013398-4766-4DFD-A2DE-EA114527E28D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40013398-4766-4DFD-A2DE-EA114527E28D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40013398-4766-4DFD-A2DE-EA114527E28D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{64CCAA2E-90E2-40C0-AC76-A999F532977D} = {39CF130B-0CC0-4C10-AF2E-8E3B8A9FF856}
+		{D447AB80-91B6-44C6-8A4E-710746524D35} = {D4E53512-4625-4FCB-9F87-25608009FA18}
+		{1CD6E5CA-D3DA-4821-B2D4-57EDB211B604} = {62BDEDBE-0EC2-4F37-AC67-9EDBB7C33C9B}
+		{40013398-4766-4DFD-A2DE-EA114527E28D} = {62BDEDBE-0EC2-4F37-AC67-9EDBB7C33C9B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F7C6EBA-AA46-467C-B78D-EF8013F4EC38}
+	EndGlobalSection
+EndGlobal

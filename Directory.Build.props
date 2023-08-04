@@ -1,0 +1,36 @@
+<Project>
+
+  <Import Project="build\dependencies.props" />
+  <Import Project="build\version.props" />
+
+  <PropertyGroup>
+    <Product>OAuth</Product>
+    <Authors>Ronaldo André</Authors>
+    <Company>Ronaldo André</Company>
+    <Copyright>Ronaldo André © Todos os direitos reservados.</Copyright>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)StyleCop.Analyzers.ruleset</CodeAnalysisRuleSet>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IsTransformWebConfigDisabled>true</IsTransformWebConfigDisabled>
+    <UserSecretsId>aa460bd6-05f9-4c08-9194-398f431f862e</UserSecretsId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="$(MSBuildThisFileDirectory)stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="$(StyleCopAnalyzersPackageVersion)"
+      PrivateAssets="all" />
+  </ItemGroup>
+
+</Project>
